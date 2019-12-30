@@ -14,6 +14,11 @@
         "latitude"  :   -34.9499,
         "longitude" :   138.5194
     },
+    "Tullamarine": {
+    "altitude": 0,
+    "latitude": -37.6656,
+    "longitude": 144.8319
+    },
     "Boston Spa": { 
         "latitude"  :   53.8997,
         "longitude" :   -1.3629,
