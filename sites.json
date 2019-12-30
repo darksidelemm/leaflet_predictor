@@ -1,0 +1,43 @@
+{
+    "Churchill": {
+        "latitude"  :   52.2135,
+        "longitude" :   0.0964,
+        "altitude"  :   0
+    },
+    "Elsworth": {
+        "latitude"  :   52.2511,
+        "longitude" :   -0.0927,
+        "altitude"  :   0
+    },
+    "Adelaide": {
+        "altitude"  :   0,
+        "latitude"  :   -34.9499,
+        "longitude" :   138.5194
+    },
+    "Boston Spa": { 
+        "latitude"  :   53.8997,
+        "longitude" :   -1.3629,
+        "altitude"  :   0
+    },
+    "Mt Barker": {
+        "altitude"  :   360,
+        "latitude"  :   -35.0765,
+        "longitude" :   138.8569
+    },
+    "Cookstown": {
+        "altitude"  :   60,
+        "latitude"  :   54.632162,
+        "longitude" :   -6.757982
+    },
+    "Preston St Mary": {
+        "latitude"  :   52.1215,
+        "longitude" :   0.8078,
+        "altitude"  :   70
+    },
+    "Ross-on-Wye": {
+        "altitude"  :   150,
+        "latitude"  :   51.95023,
+        "longitude" :   -2.5445
+    }
+
+}

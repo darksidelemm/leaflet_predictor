@@ -1,0 +1,277 @@
+/*
+* CUSF Landing Prediction Version 2
+* http://www.cuspaceflight.co.uk
+*
+* Jon Sowman 2010
+* jon@hexoc.com
+* http://www.hexoc.com
+*
+* http://github.com/jonsowman/cusf-standalone-predictor
+*
+*/
+
+/* Basic font-size and family. */
+html {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+body {
+	margin: 0; padding: 0;
+        background-color: #000000;
+}
+
+a { text-decoration: underline; color: #333; cursor: pointer; }
+
+/* The whoppping map in the centre */
+html, body, #map_canvas {
+    height: 100%;
+    width: 100vw;
+    z-index: 1;
+}
+
+.box{ z-index: 1000 !important ;}
+
+#status_message{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 60px;
+    margin-left: -200px;
+    margin-top: -50px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+#error_window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -50px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+#debuginfo {
+    white-space: pre;
+}
+
+#burst-calc-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+#notam-settings-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+/*
+#burst-calc {
+    display: none;
+    padding: 5px;
+    text-align: center;
+}
+*/
+
+#burst-calc-constants {
+    display: none;
+}
+
+#location_save {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -120px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+#location_save_local {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -120px;
+    padding: 1em;
+    text-align: center;
+    display: none;
+}
+
+.box {
+    position: absolute; 
+    background-color: white; 
+    border: 1px solid #0070a3; 
+    padding: 0.5em;
+}
+
+.box {
+    background-attachment:initial;
+    background-clip:initial;
+    background-color:rgb(255, 255, 255);
+    background-color:rgba(255, 255, 255, 0.746094);
+    background-image:initial;
+    background-origin:initial;
+    background-position:initial initial;
+    background-repeat:initial initial;
+}
+
+.box * {
+	font-size: 12px;
+}
+
+.box table { 
+	margin: 0.25em auto;
+	white-space: nowrap;
+}
+
+.box h1 { 
+	text-align: center;
+	margin: 0em 0em 0.5em 0em;
+}
+
+.box p { 
+	margin: 0 auto;
+	margin-bottom: 0.25em; 
+	width: 25em;
+}
+
+#trail_table { 
+	right: 0; bottom: 0;
+	border-right: none;
+	border-bottom: none;
+	display: none;
+}
+
+#scenario_template { 
+        width: 400px;
+	left: 0; bottom: 0; 
+	border-left: none;
+	border-bottom: none;
+    display: none;
+}
+
+#scenario_template_scroller {
+    max-height: 400px;
+    overflow: scroll;
+}
+
+#input_form {
+    overflow: hidden;
+    width: 400px;
+    padding: 5px 5px 0px 5px;
+    bottom: 0; right: 0;
+    max-height: 500px;
+}
+
+#launch-card {
+    width: 100%;
+    padding: 5px;
+}
+
+#launch-card tr {
+    width: 50%;
+}
+
+#scenario_info {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    width: 400px;
+    text-align:center;
+    padding: 5px;
+    line-height: 130%;
+}
+
+/* about window is a jqueryui dialog */
+#about_window {
+    display: none;
+}
+
+/* the vehicle_button buttons from spacenear */
+.control_buttons {
+    border: solid #aed0ea 1px;
+    background-color: #deedf7;
+    padding: 3px;
+    margin-top: 1em;
+    color: #888;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    cursor: default;
+    line-height: 220%;
+    font-size: 10px;
+}
+
+.control_button {
+    font-weight: bold;
+    color: #5c9dc2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.control_button:hover {
+    color: #0070a3;
+}
+
+img.handle {
+    position: relative;
+    float:left;
+    top:0px;
+    left:0px;
+    z-index:100;
+}
+
+td.right-td {
+	text-align: right;
+}
+
+td.spacer {
+	width: 1em;
+}
+
+table#trails {
+	border-collapse: collapse;
+}
+
+table#trails td, table#trails th { 
+	border: 1px solid #6666ff;
+	padding: 0.1em 0.5em;
+	text-align: center;
+}
+
+table#trails th { 
+	background-color: #6666ff;
+	color: white;
+}
+
+
+.tipsy { padding: 5px; font-size: 10px; opacity: 0.8; filter: alpha(opacity=80); background-repeat: no-repeat;  background-image: url(../images/tipsy.gif); }
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+  .tipsy-inner { -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-north { background-position: top center; }
+  .tipsy-south { background-position: bottom center; }
+  .tipsy-east { background-position: right center; }
+  .tipsy-west { background-position: left center; }
