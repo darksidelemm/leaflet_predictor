@@ -217,7 +217,7 @@ function plotStandardPrediction(prediction){
         launch.latlng,
         {
             title: 'Balloon launch ('+launch.latlng.lat.toFixed(4)+', '+launch.latlng.lng.toFixed(4)+') at ' 
-            + launch.datetime.format("HH:MM") + " UTC",
+            + launch.datetime.format("HH:mm") + " UTC",
             icon: launch_icon
         }
     ).addTo(map);
@@ -226,7 +226,7 @@ function plotStandardPrediction(prediction){
         landing.latlng,
         {
             title: 'Predicted Landing ('+landing.latlng.lat.toFixed(4)+', '+landing.latlng.lng.toFixed(4)+') at ' 
-            + landing.datetime.format("HH:MM") + " UTC",
+            + landing.datetime.format("HH:mm") + " UTC",
             icon: land_icon
         }
     ).addTo(map);
@@ -236,7 +236,7 @@ function plotStandardPrediction(prediction){
         {
             title: 'Balloon burst ('+burst.latlng.lat.toFixed(4)+', '+burst.latlng.lng.toFixed(4)+ 
             ' at altitude ' + burst.latlng.alt.toFixed(0) + ') at ' 
-            + burst.datetime.format("HH:MM") + " UTC",
+            + burst.datetime.format("HH:mm") + " UTC",
             icon: burst_icon
         }
     ).addTo(map);
