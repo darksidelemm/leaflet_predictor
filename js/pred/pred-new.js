@@ -42,6 +42,10 @@ function runPrediction(){
     // Grab other launch settings.
     run_settings.launch_latitude = parseFloat($('#lat').val());
     run_settings.launch_longitude = parseFloat($('#lon').val());
+    // Handle negative longitudes - Tawhiri wants longitudes between 0-360
+    if (run_settings.launch_longitude < 0.0){
+        run_settings.launch_longitude += 360.0
+    }
     run_settings.launch_altitude = parseFloat($('#initial_alt').val());
     run_settings.ascent_rate = parseFloat($('#ascent').val());
 
