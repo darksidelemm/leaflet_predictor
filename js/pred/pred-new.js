@@ -66,7 +66,10 @@ function runPrediction(){
 }
 
 // Tawhiri API URL. Refer to API docs here: https://tawhiri.readthedocs.io/en/latest/api.html
-var tawhiri_api = "https://predict.cusf.co.uk/api/v1/";
+// Habitat Tawhiri Instance
+//var tawhiri_api = "https://predict.cusf.co.uk/api/v1/";
+// Sondehub Tawhiri Instance
+var tawhiri_api = "https://api.v2.sondehub.org/tawhiri";
 
 function tawhiriRequest(settings){
     // Request a prediction via the Tawhiri API.
